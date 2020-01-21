@@ -36,10 +36,19 @@ int main()
 	// Nested loops to display the quarterly sales figures for each division.
 	for (div = 0; div < NUM_DIVS; div++)
 	{
-		cout << NUM_DIVS + 1 << "\t";
+		cout << div + 1 << "\t";
 		for (qtr = 0; qtr < NUM_QTRS; qtr++)
 		{
-			cout << "$" << sales[qtr][div] << "\t";
+			cout << "$" << sales[div][qtr] << "\t";
+
+			//begin keeping track of the total sales
+			totalSales += sales[div][qtr];
+
+			/*
+			*	The main issue with this section of the code is that the user had been using NUM_DIV instead of the iteratable div
+			*	which of course caused the wrong values. Then the user had swapped the iteratable variables. Thusly iterating the 
+			*	wrong number of times which wouldn't allow for the final quater to be displayed.
+			*/
 		}
 		cout << endl; // Print blank line.
 	}
