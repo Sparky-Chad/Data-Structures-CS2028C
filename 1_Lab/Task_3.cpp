@@ -12,10 +12,10 @@ struct Product {
 };
 
 // Function prototypes
-void calcSales(Product products[], int);
-void showOrder(Product products[], int);
-void dualSort(Product products[], int);
-void showTotals(Product products[], int);
+void calcSales(Product[], int);
+void showOrder(Product[], int);
+void dualSort(Product[], int);
+void showTotals(Product[], int);
 
 // NUM_PRODS is the number of products produced.
 const int NUM_PRODS = 9;
@@ -44,7 +44,8 @@ int main()
 
    //Array of Products created with data inserted
    //sales will be computed later
-   Product products[NUM_PRODS] = {
+   Product products[NUM_PRODS] = 
+   {
       {914, 842, 12.95},
       {915, 416, 14.95},
       {916, 127, 18.95},
@@ -83,7 +84,7 @@ int main()
 // price. The result is stored in the sales array.               *
 //****************************************************************
 
-void calcSales(Product products[], int num)
+void calcSales(Product *products, int num)
 {
    for (int index = 0; index < num; index++)
       products[index].sales = products[index].units_sold * products[index].prices;
@@ -98,7 +99,7 @@ void calcSales(Product products[], int num)
 // of elements in each array.                                   *
 //***************************************************************
 
-void dualSort(Product products[], int size)
+void dualSort(Product *products, int size)
 {
    int startScan, maxIndex, tempid;
    double maxValue;
@@ -131,7 +132,7 @@ void dualSort(Product products[], int size)
 // of product numbers and sales.                                 *
 //****************************************************************
 
-void showOrder(Product products[], int num)
+void showOrder(Product *products, int num)
 {
    cout << "Product Number\tSales\n";
    cout << "----------------------------------\n";
@@ -151,7 +152,7 @@ void showOrder(Product products[], int num)
 // amounts.                                                       *
 //*****************************************************************
 
-void showTotals(Product products[], int num)
+void showTotals(Product *products, int num)
 {
    int totalUnits = 0;
    double totalSales = 0.0;
