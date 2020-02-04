@@ -17,7 +17,7 @@ Basketball_Player::Basketball_Player() {
 }
 Basketball_Player::Basketball_Player(string name) {
     name = "";
-    if (this->shots.made == 0 && this->passes.made[0]) {
-        
-    }
+
+    //init ran stats
 }
+Basketball_Player::Basketball_Player(string name, Statistic )
