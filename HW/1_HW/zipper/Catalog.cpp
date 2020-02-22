@@ -1,4 +1,5 @@
-
+// Created by Chad Lape
+// Will make a catalog of inputed books
 #include <stdio.h>
 #include <iostream>
 #include <string>
