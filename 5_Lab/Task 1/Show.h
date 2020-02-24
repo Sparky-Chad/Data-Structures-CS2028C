@@ -24,7 +24,7 @@ public:
 	string toString();
 
 	// virtual function play which can be used with other classes
-	virtual void play();
+	void play();
 
 	//setters and getters
 	string gettitle() { return title; }
