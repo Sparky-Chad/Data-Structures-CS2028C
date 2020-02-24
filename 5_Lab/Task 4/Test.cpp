@@ -34,8 +34,9 @@ int main() {
         // Temp title string
         string title = "";
         // Temp Description string
-        string descrition = "";
+        string descrition ="";
         // rating choice 
+        int rat = 0;
         switch (choice) {
 
             // Add game Case
@@ -44,8 +45,11 @@ int main() {
                 getline(cin, title);
                 cout << "Description for game: \n";
                 getline(cin, descrition);
+                cout << "Rating for game: \n";
+                cin >> rat;
+                cin.ignore();
                 //make a new show from this information
-                game = new Movie(3.2, title, descrition);
+                game = new Movie(rat, title, descrition);
                 //Added with task 3
                 try {
                     //add game to shelf
@@ -61,7 +65,7 @@ int main() {
             // Remove game case
             case 2:
                 // point to a new instance of Show
-                game = new Show();
+                game = new Movie();
                 // set that instance to the removed show
 				try{
                     *game = shelf.remove_game();

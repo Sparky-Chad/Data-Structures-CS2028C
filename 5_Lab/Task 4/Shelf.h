@@ -16,7 +16,7 @@ public:
     Shelf();
 
     // Adds a game to the end
-    void add_game(T *in);
+    void add_game(T* in);
     // Gets a game from end of the index
     T remove_game();
     // returns number of board games in the shelf
@@ -38,3 +38,38 @@ private:
 
 #endif
 
+// Must include class template declarations as the linker must
+// be able to link implicit template classes defined on compile time
+template <class T>
+Shelf<T>::Shelf(){
+	
+	for(int i = 0; i < MAX_SIZE; i++) {
+		my_show[i] = T();
+		// calls the default specifier of the class identified
+	}
+    games_stored = 0;
+	   	 
+}
+
+template <class T>
+void Shelf<T>::add_game(T* in){
+	
+	if(games_stored == 10){
+		throw ShelfFullException();
+	};
+	   	  
+	my_show[games_stored] = *in;
+
+    games_stored = games_stored +1;
+	
+}
+
+template <class T>
+T Shelf<T>::remove_game(){
+	if(games_stored == 0){
+		throw ShelfEmptyException();
+	};
+    games_stored = games_stored -1;
+    return my_show[games_stored];
+
+}
