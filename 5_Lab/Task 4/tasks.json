@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build task 2",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${fileDirname}/Shelf.cpp",
+                "${fileDirname}/Test.cpp",
+                "${fileDirname}/Show.cpp",
+                "-o",
+                "${fileDirname}/$Lab5Task1.out"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}

@@ -6,6 +6,7 @@
 using namespace std;
 
 // Defining the show class which can be used as a parent to others
+
 class Show {
 public:
 	// Constructors
