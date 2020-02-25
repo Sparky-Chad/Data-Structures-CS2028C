@@ -10,8 +10,8 @@ WINXX=i686-w64-mingw32-g++-win32
 # Default task defined
 default: task4.out
 
-win: Test.o Movie.o Shelf.o
-	$(WINXX) -o task4.exe Test.o Movie.o Show.o Shelf.o
+Win: Test.cpp Movie.cpp Shelf.cpp Show.cpp
+	$(WINXX) -o task4.exe Test.cpp Movie.cpp Show.cpp 
 
 # Define default output task
 task4.out: Test.o Movie.o Shelf.o Show.o

@@ -18,7 +18,7 @@ task2.out: Shelf.o Show.o Test.o
 
 # Sets up the filesystem into .exe format
 
-task1.exe: Test.cpp Test.h Show.cpp Show.h Shelf.cpp Shelf.h
+Win: Test.cpp Show.cpp Show.h Shelf.cpp Shelf.h
 	$(WINCXX) $(CXXFLAGS) -o task1.exe Test.cpp Show.cpp Shelf.cpp
 
 # Creating the object file for Test requires the test and h files from the others
