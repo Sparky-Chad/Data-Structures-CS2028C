@@ -6,6 +6,7 @@
 using namespace std;
 
 // Defining the show class which can be used as a parent to others
+
 class Show {
 public:
 	// Constructors
@@ -24,7 +25,7 @@ public:
 	string toString();
 
 	// virtual function play which can be used with other classes
-	void play();
+	virtual void play();
 
 	//setters and getters
 	string gettitle() { return title; }
