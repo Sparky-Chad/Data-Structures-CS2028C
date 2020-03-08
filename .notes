@@ -1,0 +1,20 @@
+/tmp/tmp.LiC3Cxg7RP
+
+python2 -c ('print "/xef"'; cat -) | ./program
+
+#Some of their notes
+-m32					; compile for 32bit
+-fno-stack-protector	; disable ProPolice
+-Wl, -z,norelro			; disable relro
+
+use execstack tool to flag the stack as executable on ELF binaries
+
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /usr/local/pwndbg/
+    * peda (https://github.com/longld/peda.git) in /usr/local/peda/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /usr/local/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+    * checksec.sh (http://www.trapkit.de/tools/checksec.html) in /usr/local/bin/checksec.sh
+
+narnia1 : efeidiedae
+To do this we need to inject shellcode into the env variable called egg. This should either escalate privledges(bin/sh). Or possibly output the narnia2 password.
